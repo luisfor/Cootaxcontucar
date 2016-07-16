@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Coocaxcontucar
+        psr4_prefix: Coocaxcontucar
+        src_path: app
