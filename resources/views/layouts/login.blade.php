@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cootaxcontucar | Log in</title>
+        <title>Cootaxcontucar | Login</title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         {!! Html::style('css/bootstrap.min.css') !!}
         {!! Html::style('css/AdminLTE.min.css') !!}
@@ -17,20 +17,21 @@
     </head>
     <body class="hold-transition login-page">
         <div class="login-box">
-            <div class="login-logo">
-                <a href="#"><b>Cootaxcontucar</b></a>
-            </div>
             <div class="login-box-body">
+                <div class="login-logo">
+                    <a href="#"><b>Cootaxcontucar</b></a>
+                </div>
+                <hr>
                 <div style="display:block; width:100%;margin: 0 auto;text-align: center;">
                     <h3 class="login-box-msg">@section('subtitulo') @show</h3>
                     <img align=center  id="svg" class="svg logo" style="max-width: 100%;" src="{{ asset('img/logo.svg') }}" alt="">
                 </div>
+                <hr>
                 @yield('content')
             </div>
         </div>
         {!!Html::script('js/jQuery-2.1.4.min.js')!!}
         {!!Html::script('js/bootstrap.min.js')!!}
-        {!!Html::script('js/icheck.min.js')!!}
         <script>
             $(function () {
                 $('input').iCheck({

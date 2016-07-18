@@ -3,15 +3,22 @@
         @include('alerts.request')
         {!!Form::open(['route'=>'login.store', 'method'=>'POST'])!!}
             @include('loginForm')
-            <div class="row">
-                <div class="col-xs-4">
-                    {!!Form::submit('Iniciar',['class'=>'btn btn-success btn-block btn-flat bdr'])!!}
-                </div>
-                {!!Form::close()!!}
-                <div class="col-xs-8">
-                    {!!link_to('#', $title = 'Olvidaste tu contraseña?',['class'=>'b'], $attributes = null, $secure = null)!!}
-                </div>
+
+            <hr>
+            <div class="checkbox">
+                     <label>
+                        {!! Form::checkbox('remember', 1, null) !!}
+                         Mantenerme contectado
+                     </label>
             </div>
+
+             <div class="form-group">
+                {!!Form::submit('Iniciar Sesi&oacute;n',['class'=>'btn btn-success bdr'])!!}
+                
+
+                {!!link_to('#', $title = '¡Registrar un usuario!', ['class'=>'btn btn-link b'] , $attributes = null, $secure = null)!!}                
+            </div>
+            {!!Form::close()!!}
     @endsection
     @section('subtitulo')
         Iniciar sesión
